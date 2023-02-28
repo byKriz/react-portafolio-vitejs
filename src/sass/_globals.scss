@@ -1,0 +1,25 @@
+@use "../sass/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: $font;
+  color: $font-color;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+.container {
+  padding: 0rem 12rem 0 12rem;
+}
+
+@media screen and (max-width: $large) {
+  .container {
+    padding: 0 2rem;
+  }
+}
