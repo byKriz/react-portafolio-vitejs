@@ -1,0 +1,19 @@
+@use "../../sass/variables" as *;
+
+.headerContainer {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: $header-index;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    cursor: pointer;
+}
