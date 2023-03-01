@@ -1,19 +1,82 @@
 @use "../../sass/variables" as *;
 
 .headerContainer {
-    display: flex;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: $header-index;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: $header-index;
 }
 
 .navContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 10px 20px;
 }
 
 .logo {
-    cursor: pointer;
+  cursor: pointer;
+
+  img {
+    height: 60px;
+  }
+}
+
+.desktopMenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  // margin-left: -10px;
+}
+
+.listItems {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mobileMenu {
+  position: relative;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.menuIcon {
+  display: none;
+  cursor: pointer;
+}
+
+.dropDownMenu {
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  top: 50px;
+  right: -200px;
+}
+
+.listMobileItems {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.openMenu {
+  right: 20px;
+}
+
+@media screen and (max-width: $medium) {
+  .desktopMenu {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  .menuIcon {
+    display: block;
+  }
 }
